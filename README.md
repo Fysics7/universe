@@ -23,9 +23,9 @@ Since this is the final project of the coding bootcamp, I wanted to build someth
 
 
 # Installation Instructions
-## Pre-Instructions =>
+Preconditions
 - Instructions are for macOS 
-- Install MongoDB
+- Install MongoDB, prior to attempting these instructions
 
 1. Fork the github repository `universe` and then clone the forked repository to your computer via VSCode or any other text editor.
 2. In your main terminal (Assuming you have MongoDB installed), at command prompt, type `mongod`.  Leave the terminal window up.  
