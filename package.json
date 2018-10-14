@@ -4,6 +4,7 @@
   "description": "MERN application that allows users to create a Captain, pick a species, and select a spaceship to explore a galaxy",
   "main": "index.js",
   "scripts": {
+    "client-install": "npm install --prefix client",
     "server": "node server.js",
     "client": "node scripts/start-client.js",
     "start": "concurrently \"nodemon server.js\" \"npm run client\"",

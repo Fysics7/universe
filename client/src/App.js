@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
+
+import 'bootstrap/dist/css/bootstrap.min.css';
 import './App.css';
-import {BrowserRouter as Router, Route, Redirect} from 'react-router-dom';
+import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom';
 import axios from 'axios';
 
 import SignIn from "./components/SignIn";
@@ -12,17 +14,17 @@ class App extends Component {
     username: "",
     password: "",
     auth: {
-      userId:"",
-      username:"",
-      isAuthenticated:false
+      userId: "",
+      username: "",
+      isAuthenticated: false
     }
   };
 
-  componentWillMount(){
-    axios.get("/auth/isAuthenticated").then((result)=>{
-      const {userId, isAuthenticated,username} = result.data
+  componentWillMount() {
+    axios.get("/auth/isAuthenticated").then((result) => {
+      const { userId, isAuthenticated, username } = result.data
       this.setState({
-        auth:{
+        auth: {
           userId,
           isAuthenticated,
           username
@@ -32,8 +34,8 @@ class App extends Component {
   }
 
   handleChange = (event) => {
-    const {name, value} = event.target;    
-        // Set the state for the appropriate input field
+    const { name, value } = event.target;
+    // Set the state for the appropriate input field
     this.setState({
       [name]: value
     });
@@ -45,18 +47,26 @@ class App extends Component {
     //call a sign In function
     const newUser = {
       username: this.state.username,
-      password: this.state.password
+      password: this.state.password,
+      firstName: this.state.firstName,
+      lasName: this.state.lastName,
+      captName: this.state.captName,
+      captBio: this.state.captBio
     };
     this.setState({
       username: "",
-      password: ""
-    }); 
-    const {name} = event.target;
+      password: "",
+      firstName: "",
+      lastName: "",
+      captName: "",
+      captBio: ""
+    });
+    const { name } = event.target;
     axios.post(name, newUser).then((data) => {
-      if (data.data.isAuthenticated){
-        const {userId, isAuthenticated,username} = data.data;
+      if (data.data.isAuthenticated) {
+        const { userId, isAuthenticated, username } = data.data;
         this.setState({
-          auth:{
+          auth: {
             userId,
             isAuthenticated,
             username
@@ -68,11 +78,15 @@ class App extends Component {
 
   handleLogout = (event) => {
     event.preventDefault();
-    axios.get("/auth/logout").then((result)=>{
+    axios.get("/auth/logout").then((result) => {
       this.setState({
-        auth:{
+        auth: {
           userId: "",
           username: "",
+          firstName: "",
+          lastName: "",
+          captName: "",
+          captBio: "",
           isAuthenticated: false
         }
       });
@@ -84,38 +98,42 @@ class App extends Component {
     return (
       <Router>
         <div>
-        <Route exact path = "/" render = {()=> {
-          if(loggedIn){
-            return <Redirect to = "/home" />
-          } else{
-            return <SignIn 
-              handleChange= {this.handleChange} 
-              handleSubmit = {this.handleSubmit}
-              email = {this.state.email}
-              password = {this.state.password}
-            />
-          } 
-        }}/>
-        <Route exact path = "/signup" render = {()=> {
-          if(loggedIn){
-            return <Redirect to = "/home" />
-          } else{
-            return <SignUp 
-              handleChange= {this.handleChange} 
-              handleSubmit = {this.handleSubmit}
-              email = {this.state.email}
-              password = {this.state.password}
-            />
-          }  
-        }}/>
-        <Route exact path = "/home" render = {()=> {
-          if(!loggedIn){
-            return <Redirect to = "/" />
-          } else {
-            return <Home handleLogout = {this.handleLogout} auth = { this.state.auth }/>
-          } 
-        }
-        }/>
+          <Route exact path="/" render={() => {
+            if (loggedIn) {
+              return <Redirect to="/home" />
+            } else {
+              return <SignIn
+                handleChange={this.handleChange}
+                handleSubmit={this.handleSubmit}
+                email={this.state.email}
+                password={this.state.password}
+              />
+            }
+          }} />
+          <Route exact path="/signup" render={() => {
+            if (loggedIn) {
+              return <Redirect to="/home" />
+            } else {
+              return <SignUp
+                handleChange={this.handleChange}
+                handleSubmit={this.handleSubmit}
+                email={this.state.email}
+                password={this.state.password}
+                firstName={this.state.firstName}
+                lastName={this.state.lastName}
+                captName={this.state.captName}
+                captBio={this.state.captBio}
+              />
+            }
+          }} />
+          <Route exact path="/home" render={() => {
+            if (!loggedIn) {
+              return <Redirect to="/" />
+            } else {
+              return <Home handleLogout={this.handleLogout} auth={this.state.auth} />
+            }
+          }
+          } />
         </div>
       </Router>
     );
