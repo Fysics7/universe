@@ -14,6 +14,7 @@ import Galaxy from "./components/pages/Galaxy";
 import Game from "./components/pages/Game";
 import Ships from "./components/pages/Ships";
 
+
 class App extends Component {
   state = {
     username: "",

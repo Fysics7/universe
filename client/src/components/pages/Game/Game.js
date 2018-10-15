@@ -7,7 +7,7 @@
 import React from "react";
 
 const Game = () => (
-    <div>
+    <div className="container">
       <h1>REMNANT: The Lore</h1>
       <p>
         What is going on in solar system that is making your people choose you to be save the day?
