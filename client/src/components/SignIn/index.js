@@ -1,7 +1,10 @@
 import React from 'react';
+import SiteNav from "../SiteNav";
 import "./style.css";
 import {Link} from 'react-router-dom';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
+
+
 
 
 
@@ -22,11 +25,6 @@ const SignIn = (props)=> {
 				</FormGroup>
 				<Button type = 'submit' name = "/auth/signin" onClick = {props.handleSubmit}>Sign In</Button>
 			</Form>
-
-
-
-
-
 
 			{/* <form>
 				<label>Email</label><br/>
