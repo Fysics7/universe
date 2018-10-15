@@ -1,13 +1,17 @@
-import React, { Component } from 'react';
-
-import 'bootstrap/dist/css/bootstrap.min.css';
-import './App.css';
-import { BrowserRouter as Router, Route, Redirect } from 'react-router-dom';
-import axios from 'axios';
+import React, { Component } from "react";
+import "bootstrap/dist/css/bootstrap.min.css";
+import "./App.css";
+import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
+import axios from "axios";
 
 import SignIn from "./components/SignIn";
 import SignUp from "./components/SignUp";
 import Home from "./components/Home";
+// Added the pages imports 
+import Explorer from "./components/pages/Explorer";
+import Galaxy from "./components/pages/Galaxy";
+import Game from "./components/pages/Game";
+import Ships from "./components/pages/Ships";
 
 class App extends Component {
   state = {
@@ -21,8 +25,8 @@ class App extends Component {
   };
 
   componentWillMount() {
-    axios.get("/auth/isAuthenticated").then((result) => {
-      const { userId, isAuthenticated, username } = result.data
+    axios.get("/auth/isAuthenticated").then(result => {
+      const { userId, isAuthenticated, username } = result.data;
       this.setState({
         auth: {
           userId,
@@ -33,15 +37,15 @@ class App extends Component {
     });
   }
 
-  handleChange = (event) => {
+  handleChange = event => {
     const { name, value } = event.target;
     // Set the state for the appropriate input field
     this.setState({
       [name]: value
     });
-  }
+  };
 
-  handleSubmit = (event) => {
+  handleSubmit = event => {
     event.preventDefault();
 
     //call a sign In function
@@ -62,7 +66,7 @@ class App extends Component {
       captBio: ""
     });
     const { name } = event.target;
-    axios.post(name, newUser).then((data) => {
+    axios.post(name, newUser).then(data => {
       if (data.data.isAuthenticated) {
         const { userId, isAuthenticated, username } = data.data;
         this.setState({
@@ -74,11 +78,11 @@ class App extends Component {
         });
       }
     });
-  }
+  };
 
-  handleLogout = (event) => {
+  handleLogout = event => {
     event.preventDefault();
-    axios.get("/auth/logout").then((result) => {
+    axios.get("/auth/logout").then(result => {
       this.setState({
         auth: {
           userId: "",
@@ -90,7 +94,7 @@ class App extends Component {
           isAuthenticated: false
         }
       });
-    })
+    });
   };
 
   render() {
@@ -98,42 +102,67 @@ class App extends Component {
     return (
       <Router>
         <div>
-          <Route exact path="/" render={() => {
-            if (loggedIn) {
-              return <Redirect to="/home" />
-            } else {
-              return <SignIn
-                handleChange={this.handleChange}
-                handleSubmit={this.handleSubmit}
-                email={this.state.email}
-                password={this.state.password}
-              />
-            }
-          }} />
-          <Route exact path="/signup" render={() => {
-            if (loggedIn) {
-              return <Redirect to="/home" />
-            } else {
-              return <SignUp
-                handleChange={this.handleChange}
-                handleSubmit={this.handleSubmit}
-                email={this.state.email}
-                password={this.state.password}
-                firstName={this.state.firstName}
-                lastName={this.state.lastName}
-                captName={this.state.captName}
-                captBio={this.state.captBio}
-              />
-            }
-          }} />
-          <Route exact path="/home" render={() => {
-            if (!loggedIn) {
-              return <Redirect to="/" />
-            } else {
-              return <Home handleLogout={this.handleLogout} auth={this.state.auth} />
-            }
-          }
-          } />
+          <Route
+            exact
+            path="/"
+            render={() => {
+              if (loggedIn) {
+                return <Redirect to="/home" />;
+              } else {
+                return (
+                  <SignIn
+                    handleChange={this.handleChange}
+                    handleSubmit={this.handleSubmit}
+                    email={this.state.email}
+                    password={this.state.password}
+                  />
+                );
+              }
+            }}
+          />
+          <Route
+            exact
+            path="/signup"
+            render={() => {
+              if (loggedIn) {
+                return <Redirect to="/home" />;
+              } else {
+                return (
+                  <SignUp
+                    handleChange={this.handleChange}
+                    handleSubmit={this.handleSubmit}
+                    email={this.state.email}
+                    password={this.state.password}
+                    firstName={this.state.firstName}
+                    lastName={this.state.lastName}
+                    captName={this.state.captName}
+                    captBio={this.state.captBio}
+                  />
+                );
+              }
+            }}
+          />
+          <Route
+            exact
+            path="/home"
+            render={() => {
+              if (!loggedIn) {
+                return <Redirect to="/" />;
+              } else {
+                return (
+                  <Home
+                    handleLogout={this.handleLogout}
+                    auth={this.state.auth}
+                  />
+                );
+              }
+            }}
+          />
+          Added component routes for the pages
+          <Route exact path="/explorer" component={Explorer} />
+          <Route exact path="/galaxy" component={Galaxy} />
+          <Route exact path="/game" component={Game} />
+          <Route exact path="/ships" component={Ships} />
         </div>
       </Router>
     );

@@ -7,7 +7,7 @@ const SignUp = (props) => {
 	return (
 		<div id="signUpForm">
 			<h1 id="formHeader">Account Creation</h1>
-			<p>Already have an account? <Link to = "/" >Sign In</Link></p>
+			<p>Already Have A Captain? <Link to = "/" >Sign In</Link></p>
 			
 			<Form>
 				<FormGroup>

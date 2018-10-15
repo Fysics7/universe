@@ -3,6 +3,8 @@ import SiteNav from "../SiteNav"
 import { Card, Button, CardTitle, CardText, CardBody, CardSubtitle } from 'reactstrap';
 import "./style.css";
 
+
+
 const Home = (props) => {
 	return (
 		<div>
