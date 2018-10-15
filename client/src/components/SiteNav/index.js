@@ -12,7 +12,8 @@ import {
 import "./style.css";
 
 // TODO: Need to have the navbar present on all the pages and the links to function
-// TODO: 
+// Completed the TODO: but the home page is showing the SiteNav on the bottom of the card
+
 
 class SiteNav extends Component {
 
@@ -36,7 +37,7 @@ class SiteNav extends Component {
 						<Collapse isOpen={this.state.isOpen} navbar>
 							<Nav className="ml-auto" navbar>
 								<NavItem>
-									<NavLink href="">
+									<NavLink href="/game">
 										GAME
 									</NavLink>
 								</NavItem>
@@ -46,7 +47,7 @@ class SiteNav extends Component {
 									</NavLink>
 								</NavItem>
 								<NavItem>
-									<NavLink href="/explorers">
+									<NavLink href="/explorer">
 										EXPLORER
 									</NavLink>
 								</NavItem>

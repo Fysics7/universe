@@ -8,6 +8,7 @@ import SignIn from "./components/SignIn";
 import SignUp from "./components/SignUp";
 import Home from "./components/Home";
 // Added the pages imports 
+import SiteNav from "./components/SiteNav";
 import Explorer from "./components/pages/Explorer";
 import Galaxy from "./components/pages/Galaxy";
 import Game from "./components/pages/Game";
@@ -158,11 +159,15 @@ class App extends Component {
               }
             }}
           />
-          Added component routes for the pages
+          {/* Added component routes for the pages */}
+          {/* <Route expath="/explorer" component={Explorer} /> <= THIS CODE RENDERS EXPLORER PAGE ON HOME PAGE - Comment out to see this work*/}
+          <div>
+          <SiteNav />
           <Route exact path="/explorer" component={Explorer} />
           <Route exact path="/galaxy" component={Galaxy} />
           <Route exact path="/game" component={Game} />
           <Route exact path="/ships" component={Ships} />
+          </div>
         </div>
       </Router>
     );
