@@ -15,7 +15,7 @@ import "./style.css";
 // Completed the TODO: but the home page is showing the SiteNav on the bottom of the card
 
 
-class SiteNav extends Component {
+export class SiteNav extends React.Component {
 
 	state = {
 		isOpen: false

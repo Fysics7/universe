@@ -7,7 +7,7 @@ import axios from "axios";
 import SignIn from "./components/SignIn";
 import SignUp from "./components/SignUp";
 import Home from "./components/Home";
-// Added the pages imports 
+// Added the pages imports
 import SiteNav from "./components/SiteNav";
 import Explorer from "./components/pages/Explorer";
 import Galaxy from "./components/pages/Galaxy";
@@ -101,75 +101,77 @@ class App extends Component {
   render() {
     const loggedIn = this.state.auth.isAuthenticated;
     return (
-      <Router>
+      <div className="container">
         <div>
-          <Route
-            exact
-            path="/"
-            render={() => {
-              if (loggedIn) {
-                return <Redirect to="/home" />;
-              } else {
-                return (
-                  <SignIn
-                    handleChange={this.handleChange}
-                    handleSubmit={this.handleSubmit}
-                    email={this.state.email}
-                    password={this.state.password}
-                  />
-                );
-              }
-            }}
-          />
-          <Route
-            exact
-            path="/signup"
-            render={() => {
-              if (loggedIn) {
-                return <Redirect to="/home" />;
-              } else {
-                return (
-                  <SignUp
-                    handleChange={this.handleChange}
-                    handleSubmit={this.handleSubmit}
-                    email={this.state.email}
-                    password={this.state.password}
-                    firstName={this.state.firstName}
-                    lastName={this.state.lastName}
-                    captName={this.state.captName}
-                    captBio={this.state.captBio}
-                  />
-                );
-              }
-            }}
-          />
-          <Route
-            exact
-            path="/home"
-            render={() => {
-              if (!loggedIn) {
-                return <Redirect to="/" />;
-              } else {
-                return (
-                  <Home
-                    handleLogout={this.handleLogout}
-                    auth={this.state.auth}
-                  />
-                );
-              }
-            }}
-          />
-          {/* Added component routes for the pages */}
-          {/* <Route expath="/explorer" component={Explorer} /> <= THIS CODE RENDERS EXPLORER PAGE ON HOME PAGE - Comment out to see this work*/}
-          <div>
           <SiteNav />
-          <Route exact path="/explorer" component={Explorer} />
-          <Route exact path="/galaxy" component={Galaxy} />
-          <Route exact path="/game" component={Game} />
-          <Route exact path="/ships" component={Ships} />
-          </div>
         </div>
-      </Router>
+        <Router>
+          <div>
+            <Route
+              exact
+              path="/"
+              render={() => {
+                if (loggedIn) {
+                  return <Redirect to="/home" />;
+                } else {
+                  return (
+                    <SignIn
+                      handleChange={this.handleChange}
+                      handleSubmit={this.handleSubmit}
+                      email={this.state.email}
+                      password={this.state.password}
+                    />
+                  );
+                }
+              }}
+            />
+            <Route
+              exact
+              path="/signup"
+              render={() => {
+                if (loggedIn) {
+                  return <Redirect to="/home" />;
+                } else {
+                  return (
+                    <SignUp
+                      handleChange={this.handleChange}
+                      handleSubmit={this.handleSubmit}
+                      email={this.state.email}
+                      password={this.state.password}
+                      firstName={this.state.firstName}
+                      lastName={this.state.lastName}
+                      captName={this.state.captName}
+                      captBio={this.state.captBio}
+                    />
+                  );
+                }
+              }}
+            />
+            <Route
+              exact
+              path="/home"
+              render={() => {
+                if (!loggedIn) {
+                  return <Redirect to="/" />;
+                } else {
+                  return (
+                    <Home
+                      handleLogout={this.handleLogout}
+                      auth={this.state.auth}
+                    />
+                  );
+                }
+              }}
+            />
+             <Route path="/explorer" component={Explorer} />
+          <Route path="/galaxy" component={Galaxy} />
+          <Route path="/game" component={Game} />
+          <Route path="/ships" component={Ships} />
+          </div>
+        </Router>
+        
+      </div>
+      
     );
   }
 }
