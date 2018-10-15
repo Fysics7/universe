@@ -11,6 +11,8 @@ import {
 } from 'reactstrap';
 import "./style.css";
 
+// TODO: Need to have the navbar present on all the pages and the links to function
+// TODO: 
 
 class SiteNav extends Component {
 
@@ -29,13 +31,28 @@ class SiteNav extends Component {
 			<div>
 				<Navbar color="dark" dark expand="sm" className="mb-5">
 					<Container>
-						<NavbarBrand href="/">Universe</NavbarBrand>
+						<NavbarBrand href="/">REMNANT</NavbarBrand>
 						<NavbarToggler onClick={this.toggle} />
 						<Collapse isOpen={this.state.isOpen} navbar>
 							<Nav className="ml-auto" navbar>
 								<NavItem>
-									<NavLink href="https://google.com">
-										Test
+									<NavLink href="">
+										GAME
+									</NavLink>
+								</NavItem>
+								<NavItem>
+									<NavLink href="/ships">
+										SHIPS
+									</NavLink>
+								</NavItem>
+								<NavItem>
+									<NavLink href="/explorers">
+										EXPLORER
+									</NavLink>
+								</NavItem>
+								<NavItem>
+									<NavLink href="/galaxy">
+										GALAXY
 									</NavLink>
 								</NavItem>
 							</Nav>

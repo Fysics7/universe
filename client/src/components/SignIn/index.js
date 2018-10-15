@@ -3,11 +3,14 @@ import "./style.css";
 import {Link} from 'react-router-dom';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 
+
+
 const SignIn = (props)=> {
 	return (
 		<div id="signInForm">
-			<h1 id="formHeader">SIGN IN</h1>
-			<p>Dont have an account? <Link to = "/signup">Sign Up</Link></p>
+			<h1 id="formHeader">REMNANT</h1>
+			<h3 id="subHeader">Lead | Explore | Survive</h3>
+			<p><strong>New Pilot? Enlist here:</strong> <Link to = "/signup">Sign Up</Link></p>
 			<Form>
 				<FormGroup>
 					<Label>Email</Label>
