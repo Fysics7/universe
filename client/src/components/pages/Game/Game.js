@@ -5,10 +5,12 @@
 // This page is accessible from any of the pages => not tied to any specifc flow
 
 import React from "react";
+import "./style.css";
 
 const Game = () => (
     <div className="container">
-      <h1>REMNANT: The Lore</h1>
+      <h1>REMNANT: THE LORE
+      </h1>
       <p>
         What is going on in solar system that is making your people choose you to be save the day?
       </p>

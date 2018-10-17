@@ -12,17 +12,47 @@ import { Card, CardImg, CardText, CardBody,
 
 const Galaxy = (props)=> {
 	return (
-		<div>
+		<div className="container">
 			<div id="galaxyCard">
+			<h1 id="galaxyHeader">ELIPTICAL GALAXY</h1>
+			<h3 id="subHeader">Large Size</h3>
+			<p>Background information regarding the gameplay for a medium sized galaxy</p>
+		  <Card>
+			<CardImg top width="100%" src="http://www.umich.edu/~gs265/spiral.jpg" alt="Eliptical" />
+			<CardBody>
+			  <CardTitle id="speciesAttributes">Galaxy Properties</CardTitle>
+			  <CardSubtitle id="listAttributes">Length in Light Years (Ly)</CardSubtitle>
+			  <CardText>400,000 Light Years</CardText>
+			  <Button id="button" type = 'submit' name = "select" onClick = {props.handleSubmit}>Select This Galaxy</Button>
+			</CardBody>
+		  </Card>
+		  </div>
+
+	<div id="galaxyCard">
 			<h1 id="galaxyHeader">SPIRAL GALAXY</h1>
 			<h3 id="subHeader">Medium Size</h3>
 			<p>Background information regarding the gameplay for a medium sized galaxy</p>
 		  <Card>
-			<CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=90" alt="Species 1" />
+			<CardImg top width="100%" src="https://www.spaceanswers.com/wp-content/uploads/2015/01/Screen-Shot-2015-01-12-at-14.26.52.png" alt="Spiral" />
 			<CardBody>
 			  <CardTitle id="speciesAttributes">Galaxy Properties</CardTitle>
 			  <CardSubtitle id="listAttributes">Length in Light Years (Ly)</CardSubtitle>
 			  <CardText>100,000 Light Years</CardText>
+			  <Button id="button" type = 'submit' name = "select" onClick = {props.handleSubmit}>Select This Galaxy</Button>
+			</CardBody>
+		  </Card>
+		  </div>
+
+	<div id="galaxyCard">
+			<h1 id="galaxyHeader">IRREGULAR GALAXY</h1>
+			<h3 id="subHeader">Small Size</h3>
+			<p>Background information regarding the gameplay for a medium sized galaxy</p>
+		  <Card>
+			<CardImg top width="100%" src="http://cdn.sci-news.com/images/2017/04/image_4802-NGC-7250.jpg" alt="Irregular" />
+			<CardBody>
+			  <CardTitle id="speciesAttributes">Galaxy Properties</CardTitle>
+			  <CardSubtitle id="listAttributes">Length in Light Years (Ly)</CardSubtitle>
+			  <CardText>40,000 Light Years</CardText>
 			  <Button id="button" type = 'submit' name = "select" onClick = {props.handleSubmit}>Select This Galaxy</Button>
 			</CardBody>
 		  </Card>
