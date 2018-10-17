@@ -14,6 +14,8 @@ import "./style.css";
 import { Card, CardImg, CardText, CardBody,
 	CardTitle, CardSubtitle, Button } from 'reactstrap';
 
+
+
 const Ships = (props)=> {
 	return (
 		<div>
