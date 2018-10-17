@@ -1,5 +1,4 @@
 import React from 'react';
-import SiteNav from "../SiteNav";
 import "./style.css";
 import {Link} from 'react-router-dom';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
