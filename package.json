@@ -22,7 +22,7 @@
   "bugs": {
     "url": "https://github.com/Fysics7/universe/issues"
   },
-  "homepage": "https://github.com/Fysics7/universe#readme",
+  "homepage": "https://safe-ravine-18306.herokuapp.com/",
   "dependencies": {
     "express": "^4.16.4",
     "express-session": "^1.15.6",
