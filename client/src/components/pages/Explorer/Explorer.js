@@ -5,70 +5,83 @@
 
 import React from 'react';
 import "./style.css";
+import { Container, Row, Col } from "reactstrap";
 import { Card, CardImg, CardText, CardBody,
     CardTitle, CardSubtitle, Button } from 'reactstrap';
 
 
 const Explorer = (props)=> {
 	return (
-		<div className="container">
-			<div id="explorerCard">
-			<h1 id="explorerHeader">Species 1</h1>
-			<h3 id="subHeader">Reptilian</h3>
-			<p>Species Background Goes Here =></p>
-		  <Card>
-			<CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=90" alt="Species 1" />
-			<CardBody>
-			  <CardTitle id="speciesAttributes">Attributes</CardTitle>
-			  <CardSubtitle id="listAttributes">Crew Attributes</CardSubtitle>
-			  <CardText>Text regarding Crew bonuses.</CardText>
-			  <CardSubtitle id="listAttributes">Species Ship Bonus</CardSubtitle>
-			  <CardText>Text regarding Ship bonuses.</CardText>
-			  <CardSubtitle id="listAttributes">Planet Side Attributes</CardSubtitle>
-			  <CardText>Text regarding Crew bonus when Planet Side</CardText>
-			  <Button id="button" type = 'submit' name = "select" onClick = {props.handleSubmit}>Select These Explorers to Pick your Ship</Button>
-			</CardBody>
-		  </Card>
-		  </div>
+		<Container>
+			<Row>
+				<Col>
+					<div id="explorerCard">
+						<h1 id="explorerHeader">Species 1</h1>
+						<h3 id="subHeader">Humanoid</h3>
+						<p>Species Background Goes Here =></p>
+		  				<Card>
+								<CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=90" alt="Species 1" />
+									<CardBody>
+										<CardTitle id="speciesAttributes">Attributes</CardTitle>
+										<CardSubtitle id="listAttributes">Crew Attributes</CardSubtitle>
+										<CardText>Text regarding Crew bonuses.</CardText>
+										<CardSubtitle id="listAttributes">Species Ship Bonus</CardSubtitle>
+										<CardText>Text regarding Ship bonuses.</CardText>
+										<CardSubtitle id="listAttributes">Planet Side Attributes</CardSubtitle>
+										<CardText>Text regarding Crew bonus when Planet Side</CardText>
+										<Button id="button" type = 'submit' name = "select" onClick = {props.handleSubmit}>Select These Explorers</Button>
+									</CardBody>
+		  					</Card>
+		  			</div>
+					</Col>
+				</Row>
 
-						<div id="explorerCard">
-			<h1 id="explorerHeader">Species 2</h1>
-			<h3 id="subHeader">Humanoid</h3>
-			<p>Species Background Goes Here =></p>
-		  <Card>
-			<CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=90" alt="Species 1" />
-			<CardBody>
-			  <CardTitle id="speciesAttributes">Attributes</CardTitle>
-			  <CardSubtitle id="listAttributes">Crew Attributes</CardSubtitle>
-			  <CardText>Text regarding Crew bonuses.</CardText>
-			  <CardSubtitle id="listAttributes">Species Ship Bonus</CardSubtitle>
-			  <CardText>Text regarding Ship bonuses.</CardText>
-			  <CardSubtitle id="listAttributes">Planet Side Attributes</CardSubtitle>
-			  <CardText>Text regarding Crew bonus when Planet Side</CardText>
-			  <Button id="button" type = 'submit' name = "select" onClick = {props.handleSubmit}>Select These Explorers to Pick your Ship</Button>
-			</CardBody>
-		  </Card>
-		  </div>
+				<Row>
+				<Col>
+					<div id="explorerCard">
+						<h1 id="explorerHeader">Species 2</h1>
+						<h3 id="subHeader">Reptilian</h3>
+						<p>Species Background Goes Here =></p>
+		  				<Card>
+								<CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=90" alt="Species 1" />
+									<CardBody>
+										<CardTitle id="speciesAttributes">Attributes</CardTitle>
+										<CardSubtitle id="listAttributes">Crew Attributes</CardSubtitle>
+										<CardText>Text regarding Crew bonuses.</CardText>
+										<CardSubtitle id="listAttributes">Species Ship Bonus</CardSubtitle>
+										<CardText>Text regarding Ship bonuses.</CardText>
+										<CardSubtitle id="listAttributes">Planet Side Attributes</CardSubtitle>
+										<CardText>Text regarding Crew bonus when Planet Side</CardText>
+										<Button id="button" type = 'submit' name = "select" onClick = {props.handleSubmit}>Select These Explorers</Button>
+									</CardBody>
+		  					</Card>
+		  			</div>
+					</Col>
+				</Row>
 
-						<div id="explorerCard">
-			<h1 id="explorerHeader">Species 3</h1>
-			<h3 id="subHeader">Avian</h3>
-			<p>Species Background Goes Here =></p>
-		  <Card>
-			<CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=90" alt="Species 1" />
-			<CardBody>
-			  <CardTitle id="speciesAttributes">Attributes</CardTitle>
-			  <CardSubtitle id="listAttributes">Crew Attributes</CardSubtitle>
-			  <CardText>Text regarding Crew bonuses.</CardText>
-			  <CardSubtitle id="listAttributes">Species Ship Bonus</CardSubtitle>
-			  <CardText>Text regarding Ship bonuses.</CardText>
-			  <CardSubtitle id="listAttributes">Planet Side Attributes</CardSubtitle>
-			  <CardText>Text regarding Crew bonus when Planet Side</CardText>
-			  <Button id="button" type = 'submit' name = "select" onClick = {props.handleSubmit}>Select These Explorers to Pick Your Ship</Button>
-			</CardBody>
-		  </Card>
-		  </div>
-		</div>
+				<Row>
+				<Col>
+					<div id="explorerCard">
+						<h1 id="explorerHeader">Species 3</h1>
+						<h3 id="subHeader">Avian</h3>
+						<p>Species Background Goes Here =></p>
+		  				<Card>
+								<CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=90" alt="Species 1" />
+									<CardBody>
+										<CardTitle id="speciesAttributes">Attributes</CardTitle>
+										<CardSubtitle id="listAttributes">Crew Attributes</CardSubtitle>
+										<CardText>Text regarding Crew bonuses.</CardText>
+										<CardSubtitle id="listAttributes">Species Ship Bonus</CardSubtitle>
+										<CardText>Text regarding Ship bonuses.</CardText>
+										<CardSubtitle id="listAttributes">Planet Side Attributes</CardSubtitle>
+										<CardText>Text regarding Crew bonus when Planet Side</CardText>
+										<Button id="button" type = 'submit' name = "select" onClick = {props.handleSubmit}>Select These Explorers</Button>
+									</CardBody>
+		  					</Card>
+		  			</div>
+					</Col>
+				</Row>
+	</Container>
 	  );
 	};
 
