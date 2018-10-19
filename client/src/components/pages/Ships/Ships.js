@@ -10,7 +10,7 @@
 
 
 import React from 'react';
-import "./style.css";
+import "./Ships.css";
 import { Container, Row, Col } from "reactstrap";
 import { Card, CardImg, CardText, CardBody,
 	CardTitle, CardSubtitle, Button } from 'reactstrap';

@@ -1,18 +1,20 @@
 div.container {
-    max-width: 80%;
+    max-width: 100%;
     
 }
 
 
 div.row {
-    height: 634;
+    display: flex;
+
+    
 
 }
 
 
 #galaxyCard {
-    max-width: 400px;
-    margin: 40px;
+    max-width: 500px;
+    margin: 35px auto;
     padding: 20px;
     border: 0.5px;
     border-style: solid;

@@ -1,7 +1,8 @@
 import React from 'react';
-import "./style.css";
-import { Card, Button, CardTitle, CardText, CardBody, CardSubtitle, Container, Row, Col } from 'reactstrap';
+import "./Home.css";
+import { Card, Button, CardTitle, CardText, CardImg, CardBody, CardSubtitle, Container, Row, Col } from 'reactstrap';
 import Jumbotron from '../Hero/Hero';
+import Table from "../Info/Info";
 
 
 
@@ -15,9 +16,13 @@ const Home = (props) => {
 			</Row>
 			<Row>
 				<Col>
+					<Table />
+				</Col>
+				<Col md>
 					<div id="cardWrapper">
 						<Card>
 							<CardBody>
+							<CardImg id="homeImg" top width="100%" src="https://cdnb.artstation.com/p/assets/images/images/010/246/045/large/seif-ragab-1-seif-ragab.jpg?1523384991" alt="Card image cap" />
 							<CardTitle>AUTHENTICATION COMPLETED</CardTitle>
 							<CardSubtitle>AI: "Your credentials have been authenticated below." <p><strong>"At anytime you are finished with the dashboard and to ensure your privacy and protection. I can provide optimum security protocols via Logout. Simply
               				select the Logout button below."</strong>
@@ -31,11 +36,6 @@ const Home = (props) => {
 							</p> */}
 						</div>
 				</Col>	
-			</Row>
-
-			<Row>
-				<Col>
-				</Col>
 			</Row>
 		</Container>
 	);

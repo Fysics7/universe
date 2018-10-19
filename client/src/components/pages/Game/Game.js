@@ -6,7 +6,7 @@
 
 import React, { Component } from "react";
 import { Container, Row, Col } from "reactstrap";
-import "./style.css";
+import "./Game.css";
 
 const Game = () => (
     <div className="container">

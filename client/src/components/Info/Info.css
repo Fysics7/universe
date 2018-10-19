@@ -1,11 +1,7 @@
-div.jumbotron.jumbotron-fluid {
+.table {
     background-color: black;
     color: lightgreen;
     border-style: solid;
     border-radius: 10px;
     border-color: lightgreen;
-}
-
-button.btn.btn-primary {
-    background-color: blue;
 }
