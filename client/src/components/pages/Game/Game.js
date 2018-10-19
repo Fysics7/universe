@@ -4,7 +4,8 @@
 // Rules / Gameplay mechanics will be explained on this page
 // This page is accessible from any of the pages => not tied to any specifc flow
 
-import React from "react";
+import React, { Component } from "react";
+import { Container, Row, Col } from "reactstrap";
 import "./style.css";
 
 const Game = () => (

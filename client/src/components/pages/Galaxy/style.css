@@ -1,6 +1,13 @@
+.row {
+    display: inline-block;
+
+}
+
+
 #galaxyCard {
-    max-width: 500px;
-    margin: 30px auto;
+    display: inline-block;
+    max-width: 300px;
+    margin: 30px;
     padding: 20px;
     border: 0.5px;
     border-style: solid;
