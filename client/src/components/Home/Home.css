@@ -1,0 +1,30 @@
+div.container {
+    width: 100%;
+}
+
+div.col {
+    margin: auto;
+  
+}
+
+.row {
+    display: inline-block;
+}
+
+
+div#cardWrapper {
+    /* width: 250px; */
+    /* margin: 30px auto;
+    padding: 20px;
+    border: 0.5px;
+    border-style: solid;
+    border-radius: 10px;
+    border-color: grey;
+    background-color: #fff;
+    box-shadow: 10px 10px 5px grey; */
+
+}
+
+#homeImg {
+    width: 600px;
+}
