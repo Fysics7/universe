@@ -25,7 +25,7 @@ const Ships = (props)=> {
 					<div id="shipsCard">
 					<h1 id="shipsHeader">Large Ship</h1>
 						<h3 id="subHeader">Capital Ship Class</h3>
-          	<h3 id="subHeader">DOMINATOR</h3>
+          				<h3 id="subHeader">DOMINATOR</h3>
 							<p>Background information about the ship</p>
 		  					<Card>
 								<CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=90" alt="Species 1" />
@@ -44,7 +44,7 @@ const Ships = (props)=> {
 										<CardText>3 Attacks</CardText>
 									<CardTitle id="shipAttributes">Crew Size | Composition</CardTitle>
 										<CardSubtitle id="listAttributes"></CardSubtitle>
-										<CardText>10 crew members</CardText>
+										<CardText>10 crew members (1 Medical / 3 Engineers / 6 Combat Specialists)</CardText>
 									<Button id="button" type = 'submit' name = "select" onClick = {props.handleSubmit}>Select This Ship and Start Game</Button>
 								</CardBody>
 		  					</Card>
