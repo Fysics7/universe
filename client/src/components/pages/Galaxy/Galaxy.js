@@ -19,7 +19,9 @@ const Galaxy = (props)=> {
 					<div id="galaxyCard">
 						<h1 id="galaxyHeader">Irregular Galaxy</h1>
 							<h3 id="subHeader">Small Size</h3>
-								<p>Background information regarding the gameplay for a medium sized galaxy</p>
+								<p>An irregular galaxy is a galaxy that does not have a distinct regular shape, unlike a spiral or an elliptical galaxy.Irregular galaxies are commonly small, about one tenth the mass of the Milky Way galaxy. Due to their small sizes, they are prone to environmental effects like crashing with large galaxies and intergalactic clouds.
+									With these smaller galaxies, expect gameplay to be quicker and hostile engagements more immediate.  These galaxies are for those Captain's looking for a challenge.
+								</p>
 		  						<Card>
 									<CardImg top width="100%" src="https://www.le.ac.uk/ph/faulkes/web/images/ngc55.jpg" alt="Irregular" />
 									<CardBody>
@@ -37,7 +39,9 @@ const Galaxy = (props)=> {
 					<div id="galaxyCard">
 						<h1 id="galaxyHeader">Spiral Galaxy</h1>
 							<h3 id="subHeader">Medium Size</h3>
-								<p>Background information regarding the gameplay for a medium sized galaxy</p>
+								<p>Most spiral galaxies consist of a flat, rotating disk containing stars, gas and dust, and a central concentration of stars known as the bulge. These are often surrounded by a much fainter halo of stars, many of which reside in globular clusters.
+								Spiral galaxies are named by their spiral structures that extend from the center into the galactic disc. The spiral arms are sites of ongoing star formation and are brighter than the surrounding disc because of the young, hot OB stars that inhabit them.
+								A Spiral Galaxy game allows the Captain to gather enough resources, upgrade weapons, and train crew before engaging in first hostile encounter.  This game is considered a "Normal" challenge.</p>
 		  						<Card>
 								  <CardImg top width="100%" src="https://www.as.arizona.edu/sites/default/files/styles/gallery_large/public/n5033s.jpg?itok=EAj6cUyK" alt="Species 1" />
 									<CardBody>
@@ -54,9 +58,12 @@ const Galaxy = (props)=> {
 			
 				<Col md="4">
 					<div id="galaxyCard">
-						<h1 id="galaxyHeader">Eliptical Galaxy</h1>
+						<h1 id="galaxyHeader">Elliptical Galaxy</h1>
 							<h3 id="subHeader">Large Size</h3>
-								<p>Background information regarding the gameplay for a medium sized galaxy</p>
+								<p>An elliptical galaxy is a type of galaxy having an approximately ellipsoidal shape and a smooth, nearly featureless image. Unlike flat spiral galaxies with organization and structure, elliptical galaxies are more three-dimensional, without much structure, and their stars are in somewhat random orbits around the center. 
+								Elliptical galaxies range in size from tens of millions to over one hundred trillion stars.  These galaxies are HUGE and a typical game play session will be quite longer.
+								You will have a longer time to reach mid and end game levels, however, so will your opponents.  This is a much easier pace game play challenge and will require a lot of time to complete.
+								</p>
 		  				<Card>
 						  <CardImg top width="100%" src="http://www.technovelgy.com/graphics/content10/bubble-galaxy-ngc3521.jpg" alt="Species 1" />
 							<CardBody>
