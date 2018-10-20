@@ -26,9 +26,9 @@ const Ships = (props)=> {
 					<h1 id="shipsHeader">Large Ship</h1>
 						<h3 id="subHeader">Capital Ship Class</h3>
           				<h3 id="subHeader">DOMINATOR</h3>
-							<p>Background information about the ship</p>
+							<p>Background Info Here</p>
 		  					<Card>
-								<CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=90" alt="Species 1" />
+								<CardImg top width="100%" src="https://t00.deviantart.net/vBZhR30GX_QBQZel6O2K-k1EQBQ=/500x250/filters:fixed_height(100,100):origin()/pre00/09f6/th/pre/f/2017/355/7/2/kalarian_battleship_shark_class_by_era_7-dbxewed.jpg" alt="Ship 1" />
 								<CardBody>
 									<CardTitle id="shipAttributes">Ship Properties</CardTitle>
 										<CardSubtitle id="listAttributes">Hull Strength</CardSubtitle>
@@ -44,15 +44,15 @@ const Ships = (props)=> {
 										<CardText>3 Attacks</CardText>
 									<CardTitle id="shipAttributes">Crew Size | Composition</CardTitle>
 										<CardSubtitle id="listAttributes"></CardSubtitle>
-										<CardText>10 crew members (1 Medical / 3 Engineers / 6 Combat Specialists)</CardText>
+										<CardText>10 crew members (1 Medical / 3 Engineers / 3 Scientists / 3 Combat Specialists)</CardText>
 									<Button id="button" type = 'submit' name = "select" onClick = {props.handleSubmit}>Select This Ship and Start Game</Button>
 								</CardBody>
 		  					</Card>
 		  			</div>
 				</Col>
-			</Row>
+			
 
-			<Row>
+			
 				<Col>
 					<div id="shipsCard">
 					<h1 id="shipsHeader">Medium Ship </h1>
@@ -60,31 +60,31 @@ const Ships = (props)=> {
             <h3 id="subHeader">VALKYRIE</h3>
 							<p>Background information about the ship</p>
 		  					<Card>
-								<CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=90" alt="Species 1" />
+								<CardImg top width="100%" src="https://t00.deviantart.net/wiN05BV4qo8vnzX52XdE5M7mh30=/700x350/filters:fixed_height(100,100):origin()/pre00/e618/th/pre/i/2014/053/f/e/mourning_wolf_by_0_hr-d77lt6o.png" alt="Species 1" />
 								<CardBody>
 			  					<CardTitle id="shipAttributes">Ship Properties</CardTitle>
 										<CardSubtitle id="listAttributes">Hull Strength (Ly)</CardSubtitle>
 										<CardText id="shipText">300 Hitpoints</CardText>
               		<CardTitle id="shipAttributes">Top Interstellar Speed</CardTitle>
-										<CardSubtitle id="listAttributes">5 Light Years (Ly)</CardSubtitle>
-										<CardText>100,000 Light Years</CardText>
-              		<CardTitle id="shipAttributes">Sublight Speed (1-10)</CardTitle>
-										<CardSubtitle id="listAttributes">Speed of 2</CardSubtitle>
-										<CardText>100,000 Light Years</CardText>
+										<CardSubtitle id="listAttributes">35 Light Years (Ly)</CardSubtitle>
+										<CardText>Evasion 5 (1-10)</CardText>
+              		<CardTitle id="shipAttributes">Sublight Cruising Speed (1-10)</CardTitle>
+										<CardSubtitle id="listAttributes">Speed of 5</CardSubtitle>
+										<CardText>Weapon Damage: 50</CardText>
               		<CardTitle id="shipAttributes">Weapons</CardTitle>
-										<CardSubtitle id="listAttributes">Beam Weapons | Missiles | Torpedoes</CardSubtitle>
-										<CardText>100,000 Light Years</CardText>
+										<CardSubtitle id="listAttributes">Beam Weapons | Missiles</CardSubtitle>
+										<CardText>2 attacks</CardText>
               		<CardTitle id="shipAttributes">Crew Size | Composition</CardTitle>
 										<CardSubtitle id="listAttributes"></CardSubtitle>
-										<CardText>10 crew members</CardText>
+										<CardText>5 crew members (1 Medic / 1 Scientist / 2 Engineers / 1 Combat Specialist)</CardText>
               		<Button id="button" type = 'submit' name = "select" onClick = {props.handleSubmit}>Select This Ship and Start Game</Button>
 									</CardBody>
 		  						</Card>
 		  			</div>
 				</Col>
-			</Row>
+			
 
-			<Row>
+		
 				<Col>	
 					<div id="shipsCard">
 					<h1 id="shipsHeader">Small Ship </h1>
@@ -92,23 +92,23 @@ const Ships = (props)=> {
             <h3 id="subHeader">WASP</h3>
 							<p>Background information about the ship</p>
 		  					<Card>
-								<CardImg top width="100%" src="https://placeholdit.imgix.net/~text?txtsize=33&txt=318%C3%97180&w=318&h=90" alt="Species 1" />
+								<CardImg top width="100%" src="https://img00.deviantart.net/9400/i/2015/153/b/4/frigate_by_zacharymadere-d8vquee.jpg" alt="Species 1" />
 								<CardBody>
 			  					<CardTitle id="shipAttributes">Ship Properties</CardTitle>
 										<CardSubtitle id="listAttributes">Hull Strength (Ly)</CardSubtitle>
-										<CardText id="shipText">300 Hitpoints</CardText>
+										<CardText id="shipText">185 Hitpoints</CardText>
               		<CardTitle id="shipAttributes">Top Interstellar Speed</CardTitle>
-										<CardSubtitle id="listAttributes">5 Light Years (Ly)</CardSubtitle>
-										<CardText>100,000 Light Years</CardText>
+										<CardSubtitle id="listAttributes">100 Light Years (Ly)</CardSubtitle>
+										<CardText>Evasion 7 (1-10)</CardText>
               		<CardTitle id="shipAttributes">Sublight Speed (1-10)</CardTitle>
-										<CardSubtitle id="listAttributes">Speed of 2</CardSubtitle>
-										<CardText>100,000 Light Years</CardText>
+										<CardSubtitle id="listAttributes">Speed of 8</CardSubtitle>
+										<CardText>Weapon Damage: 30</CardText>
               		<CardTitle id="shipAttributes">Weapons</CardTitle>
-										<CardSubtitle id="listAttributes">Beam Weapons | Missiles | Torpedoes</CardSubtitle>
-										<CardText>100,000 Light Years</CardText>
+										<CardSubtitle id="listAttributes">Beam Weapons</CardSubtitle>
+										<CardText>1 attacks (2 attacks per turn)</CardText>
               		<CardTitle id="shipAttributes">Crew Size | Composition</CardTitle>
 										<CardSubtitle id="listAttributes"></CardSubtitle>
-										<CardText>10 crew members</CardText>
+										<CardText>3 crew members (1 Medic / 1 Scientist / 1 Engineers)</CardText>
               		<Button id="button" type = 'submit' name = "select" onClick = {props.handleSubmit}>Select This Ship and Start Game</Button>
 									</CardBody>
 		  					</Card>
