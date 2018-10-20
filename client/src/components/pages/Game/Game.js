@@ -4,18 +4,20 @@
 // Rules / Gameplay mechanics will be explained on this page
 // This page is accessible from any of the pages => not tied to any specifc flow
 
-import React, { Component } from "react";
-import { Container, Row, Col } from "reactstrap";
+import React from "react";
 import "./Game.css";
+import { Container, Row, Col } from "reactstrap";
+import UncontrolledCarousel from "../Wow/Wow";
+
 
 const Game = () => (
-    <div className="container">
-      <h1>REMNANT: THE LORE
-      </h1>
-      <p>
-        What is going on in solar system that is making your people choose you to be save the day?
-      </p>
-    </div>
+    <Container id="carouselStyle">
+      <Row>
+        <Col>
+        <UncontrolledCarousel />
+        </Col>
+      </Row>
+    </Container>
   );
   
   export default Game;
