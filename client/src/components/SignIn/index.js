@@ -1,5 +1,6 @@
 import React from 'react';
 import "./index.css";
+import AudioPlayer from "../Mood/Mood";
 import {Link} from 'react-router-dom';
 import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 
@@ -9,9 +10,11 @@ import { Button, Form, FormGroup, Label, Input } from 'reactstrap';
 
 const SignIn = (props)=> {
 	return (
+	<div>
+		<AudioPlayer />
 		<div id="signInForm">
 			<h1 id="formHeader">REMNANT</h1>
-			<h3 id="subHeader">Lead | Explore | Survive</h3>
+			<h3 id="subHeader">LEAD | EXPLORE | SURVIVE</h3>
 			<p><strong>New Pilot? Enlist here:</strong> <Link to = "/signup">Sign Up</Link></p>
 			<Form>
 				<FormGroup>
@@ -35,6 +38,7 @@ const SignIn = (props)=> {
 				<button type = 'submit' name = "/auth/signin" onClick = {props.handleSubmit}>Sign In</button>
 			</form> */}
 		</div>
+	</div>
 	);
 };
 
